@@ -1,0 +1,536 @@
+###
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+  "name": "Perfume Test",
+  "category": "Perfumes",
+  "gender": "Unisex",
+  "price": 25,
+  "stock": 5,
+  "image": "/images/products/test.png",
+  "images": [
+    "/images/products/test.png"
+  ],
+  "featured": false,
+  "tags": [
+    "Fresco",
+    "Elegante"
+  ],
+  "attributes": [
+    {
+      "name": "Contenido",
+      "value": "50 ml"
+    }
+  ],
+  "description": "Producto creado mediante la API.",
+  "available": true
+}
+
+###
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+  "name": "Producto Backend",
+  "category": "Perfumes",
+  "gender": "Unisex",
+  "price": 25,
+  "stock": 10,
+  "image": "/images/products/test.png",
+  "images": [
+    "/images/products/test.png"
+  ],
+  "featured": false,
+  "tags": [
+    "Elegante",
+    "Premium"
+  ],
+  "attributes": [
+    {
+      "name": "Contenido",
+      "value": "50 ml"
+    }
+  ],
+  "description": "Producto creado mediante la API.",
+  "available": true
+}
+
+###
+
+PUT http://localhost:3000/api/products/5
+Content-Type: application/json
+
+{
+  "name": "Producto Backend Editado",
+  "category": "Perfumes",
+  "gender": "Unisex",
+  "price": 30,
+  "stock": 20,
+  "image": "/images/products/test.png",
+  "images": [
+    "/images/products/test.png"
+  ],
+  "featured": false,
+  "tags": [
+    "Premium"
+  ],
+  "attributes": [
+    {
+      "name": "Contenido",
+      "value": "100 ml"
+    }
+  ],
+  "description": "Producto actualizado mediante la API.",
+  "available": true
+}
+
+###
+DELETE http://localhost:3000/api/products/5
+
+###
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "customer_name": "Angy",
+  "customer_phone": "04241234567",
+  "items": [
+    {
+      "id": 1,
+      "name": "Body Splash Vainilla",
+      "price": 15,
+      "quantity": 2
+    },
+    {
+      "id": 2,
+      "name": "Body Splash Coco",
+      "price": 18,
+      "quantity": 1
+    }
+  ],
+  "total": 48
+}
+
+###
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Body Splash Floral",
+      "price": 15,
+      "quantity": 2
+    }
+  ],
+  "total": 30
+}
+
+###
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Sweet Vanilla",
+      "price": 15,
+      "quantity": 1
+    }
+  ],
+  "total": 15
+}
+
+###
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Sweet Vainilla",
+      "price": 20,
+      "quantity": 999
+    }
+  ],
+  "total": 19980
+}
+
+###
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "id": 999999,
+      "name": "Producto falso",
+      "price": 20,
+      "quantity": 1
+    }
+  ],
+  "total": 20
+}
+
+###
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Sweet Vanilla",
+      "price": 15,
+      "quantity": 1
+    }
+  ],
+  "total": 15
+}
+
+###
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Sweet Vanilla",
+      "price": 15,
+      "quantity": 2
+    }
+  ],
+  "total": 30
+}
+
+###
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Sweet Vanilla",
+      "price": 15,
+      "quantity": 1
+    }
+  ],
+  "total": 15
+}
+
+###
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Sweet Vanilla",
+      "price": 15,
+      "quantity": 1
+    }
+  ],
+  "total": 15
+}
+
+###
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Sweet Vanilla",
+      "price": 15,
+      "quantity": 5
+    }
+  ],
+  "total": 75
+}
+
+###
+GET http://localhost:3000/api/products/3
+
+###
+PUT http://localhost:3000/api/products/6
+Content-Type: application/json
+
+{
+  "stock": 0
+}
+
+###
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "id": 1,
+      "quantity": 2
+    }
+  ]
+}
+
+###
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "id": 1,
+      "quantity": 3
+    }
+  ]
+}
+
+###
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "id": 1,
+      "quantity": 3
+    }
+  ]
+}
+
+###
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "id": 1,
+      "quantity": 6
+    }
+  ]
+}
+
+###
+DELETE http://localhost:3000/api/products/9/image/1786848354162-lfu7if4bdm-descarga-(39).jpg
+
+###
+POST http://localhost:3000/api/admin/login
+Content-Type: application/json
+
+{
+  "password": "valia202"
+}
+
+###
+POST http://localhost:3000/api/admin/login
+Content-Type: application/json
+
+{
+  "password": "valia2026"
+}
+
+###
+POST http://localhost:3000/api/admin/login
+Content-Type: application/json
+
+{
+  "password": "valia2026"
+}
+
+###
+GET http://localhost:3000/api/admin/verify
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3ODcwMjIyNDUsImV4cCI6MTc4NzAyOTQ0NX0.luJCbZk-D2x72Gzwwfdv8vGaumz3jmJS8bLPH0WuzUw
+
+### CREAR PRODUCTO SIN TOKEN
+POST http://localhost:3000/api/products
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary
+
+------WebKitFormBoundary
+Content-Disposition: form-data; name="name"
+
+Producto prueba
+------WebKitFormBoundary
+Content-Disposition: form-data; name="price"
+
+10
+------WebKitFormBoundary--
+
+### CREAR PRODUCTO CON TOKEN INCORRECTO
+POST http://localhost:3000/api/products
+Authorization: Bearer token_falso
+
+### LOGIN ADMIN
+POST http://localhost:3000/api/admin/login
+Content-Type: application/json
+
+{
+  "password": "valia2026"
+}
+
+### CREAR PRODUCTO - TOKEN REAL
+POST http://localhost:3000/api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3ODcwMjI3ODIsImV4cCI6MTc4NzAyOTk4Mn0.-HXmd3NuPn2AIcNXNiuySdByChigjT0PqRcs578JliE
+Content-Type: multipart/form-data; boundary=----TestBoundary
+
+------TestBoundary
+Content-Disposition: form-data; name="name"
+
+Producto de prueba JWT
+------TestBoundary
+Content-Disposition: form-data; name="category"
+
+Prueba
+------TestBoundary
+Content-Disposition: form-data; name="gender"
+
+Unisex
+------TestBoundary
+Content-Disposition: form-data; name="price"
+
+10
+------TestBoundary
+Content-Disposition: form-data; name="stock"
+
+1
+------TestBoundary
+Content-Disposition: form-data; name="description"
+
+Producto creado para probar autenticación
+------TestBoundary
+Content-Disposition: form-data; name="tags"
+
+["prueba"]
+------TestBoundary
+Content-Disposition: form-data; name="attributes"
+
+[]
+------TestBoundary
+Content-Disposition: form-data; name="featured"
+
+false
+------TestBoundary--
+
+### ACTUALIZAR PRODUCTO - SIN TOKEN
+PUT http://localhost:3000/api/products/19
+Content-Type: multipart/form-data; boundary=----TestBoundary
+
+------TestBoundary
+Content-Disposition: form-data; name="price"
+
+25
+------TestBoundary
+Content-Disposition: form-data; name="stock"
+
+5
+------TestBoundary--
+
+### ACTUALIZAR PRODUCTO - TOKEN FALSO
+PUT http://localhost:3000/api/products/19
+Authorization: Bearer token_falso
+Content-Type: multipart/form-data; boundary=----TestBoundary
+
+------TestBoundary
+Content-Disposition: form-data; name="price"
+
+25
+------TestBoundary
+Content-Disposition: form-data; name="stock"
+
+5
+------TestBoundary--
+###
+POST http://localhost:3000/api/admin/login
+Content-Type: application/json
+
+{
+  "password": "valia2026"
+}
+
+### ACTUALIZAR PRODUCTO - TOKEN REAL
+PUT http://localhost:3000/api/products/19
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3ODcwMjMxMDcsImV4cCI6MTc4NzAzMDMwN30._TjyuMxL28ooaSesdtL4efRlRySl2FM0rPKHRQ9Bk_Y
+Content-Type: multipart/form-data; boundary=----TestBoundary
+
+------TestBoundary
+Content-Disposition: form-data; name="price"
+
+25
+------TestBoundary
+Content-Disposition: form-data; name="stock"
+
+5
+------TestBoundary--
+
+### ELIMINAR PRODUCTO - SIN TOKEN
+DELETE http://localhost:3000/api/products/19
+
+### ELIMINAR PRODUCTO - TOKEN FALSO
+DELETE http://localhost:3000/api/products/19
+Authorization: Bearer token_falso
+
+### ELIMINAR PRODUCTO - TOKEN REAL
+DELETE http://localhost:3000/api/products/19
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3ODcwMjMxMDcsImV4cCI6MTc4NzAzMDMwN30._TjyuMxL28ooaSesdtL4efRlRySl2FM0rPKHRQ9Bk_Y
+
+###
+POST http://localhost:3000/api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3ODcwMjMxMDcsImV4cCI6MTc4NzAzMDMwN30._TjyuMxL28ooaSesdtL4efRlRySl2FM0rPKHRQ9Bk_Y
+Content-Type: multipart/form-data; boundary=----TestBoundary
+
+------TestBoundary
+Content-Disposition: form-data; name="name"
+
+Perfume de Prueba Final
+------TestBoundary
+Content-Disposition: form-data; name="category"
+
+Perfumes
+------TestBoundary
+Content-Disposition: form-data; name="gender"
+
+Unisex
+------TestBoundary
+Content-Disposition: form-data; name="price"
+
+45
+------TestBoundary
+Content-Disposition: form-data; name="stock"
+
+10
+------TestBoundary
+Content-Disposition: form-data; name="description"
+
+Prueba completa de envio de imagen y datos
+------TestBoundary
+Content-Disposition: form-data; name="images"; filename="perfume.jpg"
+Content-Type: image/jpeg
+
+< ./test.jpg
+------TestBoundary--
+
+###
+GET http://localhost:3000/api/products
+
+###
+GET http://localhost:3000/api/products/20
+
+###
+DELETE http://localhost:3000/api/products/20/image/1787024009923-8dvppxvq824-perfume.jp
+
+###
+DELETE http://localhost:3000/api/products/20/image/1787024009923-8dvppxvq824-perfume.jp
+Authorization: Bearer token_falso
+
+###
+DELETE http://localhost:3000/api/products/20/image/1787024009923-8dvppxvq824-perfume.jp
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3ODcwMjMxMDcsImV4cCI6MTc4NzAzMDMwN30._TjyuMxL28ooaSesdtL4efRlRySl2FM0rPKHRQ9Bk_Y
+
